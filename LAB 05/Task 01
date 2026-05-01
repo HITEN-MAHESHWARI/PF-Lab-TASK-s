@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    double GPA;
+    int income;
+    printf("A university awards scholarships based on academic and financial criteria\n");
+    printf("Enter your semester GPA: ");
+    scanf("%lf", &GPA);
+    printf("Enter the Family income: ");
+    scanf("%d", &income);
+    if(GPA >= 3.5)
+    {
+        if(income <= 50000)
+        {
+            printf("100%% Scolarship");
+        }
+        else
+        {
+            printf("50%% Scholarship");
+        }
+    }
+    else
+    {
+        if(GPA >= 3.0 && GPA <= 3.5 && income <= 40000)
+        {
+           printf("25%% Scholarship Granted"); 
+        }
+        else
+        {
+            printf("No, Scholarship");
+        }
+    }
+    return 0;
+}
