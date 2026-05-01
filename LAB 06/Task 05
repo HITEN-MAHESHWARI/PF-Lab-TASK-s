@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int ElectricityBill = 0;
+    int totalConsumption = 0;
+    int count=0;
+    float average;
+    printf("Enter today consumption of electicity: ");
+        scanf("%d", &ElectricityBill);
+    while(ElectricityBill != -999){
+        count++;
+        totalConsumption += ElectricityBill;
+    printf("Enter today consumption of electicity: ");
+        scanf("%d", &ElectricityBill);
+    }
+    if(count > 0){
+     average =  (float)totalConsumption / count;
+     printf("Total average consupion of electircity is: %.2lf", average);
+    }
+    else {
+        printf("No data entered");
+    }
+    return 0;
+}
