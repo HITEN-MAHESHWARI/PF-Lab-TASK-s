@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int Choice, Item;
+    int Burger = 0, Biryani = 0, Pizza = 0;
+    int totalbill, Discount, FinalPrice;
+    do{
+    printf("1. Burger (Rs. 100)\n2. Biryani (Rs. 200)\n3. Pizza (Rs. 300)\n");
+    printf("Enter the Suitable Number: ");
+    scanf("%d", &Item);
+    if(Item == 1){
+        Burger += 100;
+    }
+    else if(Item == 2){
+        Biryani += 200;
+    }
+    else if(Item == 3){
+        Pizza += 300;
+    }
+    else{
+        printf("Invalid Input\n");
+    }
+    printf("\nWhether to add another item (1 = Yes, 0 = No): ");
+    scanf("%d", &Choice);
+    }while(Choice != 0);
+    totalbill = Burger + Biryani + Pizza;
+    if(totalbill > 3000){
+        Discount = totalbill * 10 / 100;
+        FinalPrice = totalbill - Discount;
+        printf("Your Final Bill is: %d", FinalPrice);
+    }
+    else{
+        printf("Your bill is: %d", totalbill);
+    }
+    return 0;
+}
