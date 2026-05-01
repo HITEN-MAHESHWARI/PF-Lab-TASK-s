@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int type;
+    int Fast;
+    int Desi;
+    printf("Restaurant Menu:\n");
+    printf("1. Fast Food\n2. Desi Food\nEnter food type: ");
+    scanf("%d", &type);
+    if(type == 1){
+        printf("1. Burger (Rs.500)\n2. Pizza (Rs. 1200)\nEnter type: ");
+        scanf("%d", &Fast);
+        if(Fast == 1){
+            printf("Your bill is 500 PKR");
+        }
+        else if(Fast == 2){
+            printf("Your bill is 1200 PKR");
+        }
+        else{
+            printf("Invlid Default");
+        }
+    }
+    else if(type == 2){
+        printf("1. Biryani (Rs. 350)\n2. Karahi (Rs. 1500)\nEnter any type: ");
+        scanf("%d", &Desi);
+        if(Desi == 1){
+            printf("Your bill is 350 PKR");
+        }
+        else if(Desi == 2){
+            printf("Your bill is 1500 PKR");
+        }
+        else{
+            printf("Invalid Default");
+        }
+    }
+    else{
+        printf("Invalid Default");
+    }
+
+    return 0;
+}
