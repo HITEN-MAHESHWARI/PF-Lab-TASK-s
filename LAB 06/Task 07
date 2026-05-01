@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int management=0;
+    
+    do{
+        printf("\nA simple library system MENU\n1. Issued Book\n2. Returned Book\n3. Exit\n");
+        printf("Enter any situable option: ");
+        scanf("%d", &management);
+        switch(management){
+            case 1: printf("Successfully\nBook has been Issued "); break;
+            case 2: printf("Successfully\nBook has been returned"); break;
+            case 3:
+                printf("Exiting the system");
+                break;
+            default: printf("Invalid Input"); break;
+        }
+    }while(management != 3);
+    printf("You are exit from the system");
+    return 0;
+}
