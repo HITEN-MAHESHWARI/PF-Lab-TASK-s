@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int Ticket1, Ticket2, Ticket3;
+    int TotalTicket1 = 0, TotalTicket2 = 0, TotalTicket3 = 0;
+    int TotalTicket;
+    int Tickets;
+    int Revenue = 0;
+    
+    printf("Enter the total Ticket number: ");
+    scanf("%d", &TotalTicket);
+    for(int i = 1; i <= TotalTicket; i++){
+        printf("\n1. Ticket 1 costs ($100)\n2. Ticket 2 costs ($200)\n3. Ticket 3 costs ($300)\n");
+        printf("Enter the suitable ticket number: ");
+        scanf("%d", &Tickets);
+        if(Tickets == 1){
+            TotalTicket1 += 100;
+        }
+        else if(Tickets == 2){
+            TotalTicket2 += 200;
+        }
+        else if(Tickets == 3){
+            TotalTicket3 += 300;
+        }
+        }
+        Revenue = TotalTicket1 + TotalTicket2 + TotalTicket3;
+        printf("Total Revenue is: $%d", Revenue);
+    return 0;
+}
