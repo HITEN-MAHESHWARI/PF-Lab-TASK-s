@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int MBs;
+    int balance = 100;
+    
+    while(balance > 0){
+        printf("Enter the daily usage of Data (in MB): ");
+        scanf("%d", &MBs);
+        balance = balance - MBs;
+        printf("%d", balance);
+        printf("Remaining balance: %d MB\n", balance);
+    }
+    printf("Balance finished");
+    
+    return 0;
+}
