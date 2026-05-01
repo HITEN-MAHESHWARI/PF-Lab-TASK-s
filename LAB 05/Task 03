@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() {
+    int vehicle;
+    int type;
+
+    printf("A smart parking system calculates parking fees based on:\n");
+    printf("1. Car\n2. Bike\n3. Bus\n");
+    printf("Main Vehicle Type: ");
+    scanf("%d", &vehicle);
+
+    if(vehicle == 1){
+        printf("1. Regular Parking\n2. VIP Parking\nEnter Type: ");
+        scanf("%d", &type);
+
+        if(type == 1){
+            printf("Rs. 50 per hour\n");
+        }
+        else if(type == 2){
+            printf("Rs. 100 per hour\n");
+        }
+        else{
+            printf("Invalid Option\n");
+        }
+    }
+    else if(vehicle == 2){
+        printf("1. Regular\n2. Premium\nEnter Type: ");
+        scanf("%d", &type);
+
+        if(type == 1){
+            printf("Rs. 20 per hour\n");
+        }
+        else if(type == 2){
+            printf("Rs. 40 per hour\n");
+        }
+        else{
+            printf("Invalid Option\n");
+        }
+    }
+    else if(vehicle == 3){
+        printf("Fixed Rate Rs. 200 per hour\n");
+    }
+    else{
+        printf("Invalid Vehicle Type\n");
+    }
+
+    return 0;
+}
