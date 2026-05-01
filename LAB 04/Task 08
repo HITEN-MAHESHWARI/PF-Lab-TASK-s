@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <Math.h>
+
+int main(){
+	int num;
+	double a;
+	double b;
+	int c;
+	int add, subtraction, multiplication, square, cube, base, power, absolute, result;
+	double division, squareRoot;
+	
+	printf("1. Addition\n");
+	printf("2. Subtraction\n");
+	printf("3. Multiplication\n");
+	printf("4. Division\n");
+	printf("5. Square of a Number\n");
+	printf("6. Cube of a Number\n");
+	printf("7. Square root of a Number\n");
+	printf("8. power of a number\n");
+	printf("9. Absolute Number\n");
+	printf("Enter a number: ");
+	scanf("%d", &num);
+	
+	if(num == 1 || num == 2 || num == 3 || num == 4){
+		printf("Enter 1st number: ");
+		scanf("%d", &a);
+		printf("Enter 2nd number: ");
+		scanf("%d", &b);
+	}
+	else if(num == 5 || num == 6 || num == 7 || num == 9){
+		printf("Enter a number: ");
+		scanf("%d", &c);
+	}
+	else if(num == 8){
+		printf("Enter the base value: ");
+		scanf("%d", &base);
+		printf("Enter the power value: ");
+		scanf("%d", &power);
+	}
+	switch(num){
+		case 1: 
+		add = a + b;
+		printf("Addition is = %d", add); break;
+		case 2: 
+		subtraction = a - b;
+		printf("Subtraction is = %d", subtraction); break;
+		case 3:
+		multiplication = a * b;
+		printf("Multiplication is = %d", multiplication); break;	
+		case 4:
+		division = a / b;
+		printf("Division is = %.2lf", division); break;
+		case 5:
+		square = c * c;
+		printf("Square of number is = %d", square); break;
+		case 6:
+		square = c * c * c;
+		printf("Cube of number is = %d", cube); break;
+		case 7: 
+		squareRoot = sqrt(c);
+        printf("Square root is =  %.2lf", squareRoot);
+        case 8:
+		result = pow(base,power);
+		printf("Power of a Number is = %d", result);
+        case 9:
+        	if(c < 0){
+        		absolute = -c;
+			}
+			else{
+				absolute = c;
+			}
+			printf("Absolute Value is = %d", absolute);
+        
+	}
+	return 0;
+}
