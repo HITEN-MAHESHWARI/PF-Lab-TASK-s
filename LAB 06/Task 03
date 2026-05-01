@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int Code = 2468;
+    
+    do{
+        printf("Enter the lock Code: ");
+        scanf("%d", &Code);
+        
+    }while(Code != 2468);
+    printf("Acess Granted");
+    
+    return 0;
+}
