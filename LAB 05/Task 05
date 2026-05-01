@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int Years;
+    printf("A company calculates bonus as:\nEnter how much time you give to company: ");
+    scanf("%d", &Years);
+    if(Years > 10){
+        printf("30%% of salary");
+    }
+    else if(Years >= 5 && Years < 10){
+        printf("20%% of salary");
+    }
+    else{
+        printf("10%% of salary");
+    }
+    return 0;
+}
