@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int members;
+    int Absent = 0;
+    int CheckedIn = 0;
+    for(int i = 1; i <=25; i++){
+        printf("Enter check-in status %d (1 = Checked In, 0 = Absent): ", i);
+        scanf("%d", &members);
+        if(members == 1){
+        CheckedIn++;
+        }
+        else{
+            
+            Absent++;
+        }
+    }
+    printf("Total Checked In : %d\n", CheckedIn);
+    printf("Total Absent : %d\n", Absent);
+
+    return 0;
+}
