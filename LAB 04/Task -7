@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(){
+	int totalbill;
+	int afterDiscount;
+	
+	printf("Enter the total bill amount: ");
+	scanf("%d", &totalbill);
+	
+	if(totalbill >= 5000){
+		printf("You get 20 percent discount\n");
+		afterDiscount = totalbill - (totalbill * 20 / 100);
+		printf("Now, you billing amount is: %d", afterDiscount);
+	}
+	else if(totalbill >= 3000 && totalbill < 5000){
+		printf("You get 10 percent discount\n");
+		afterDiscount = totalbill - (totalbill * 10 / 100);
+		printf("Now, you billing amount is: %d", afterDiscount);
+	}
+	else{
+		printf("No discount\n");
+		printf("Your biling amount is: %d", &totalbill);
+	}
+	return 0;
+}
