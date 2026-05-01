@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int Ndays;
+    int distance;
+    int totaldistance=0;
+    
+    printf("Enter the total days: ");
+    scanf("%d", &Ndays);
+    
+    for(int i = 1; i <= Ndays; i++){
+        printf("Day %d how much you distance covered: ", i);
+        scanf("%d", &distance);
+        totaldistance += distance;
+    }
+    printf("Total distance you have covered in %d days is: %d", Ndays, totaldistance);
+    
+    return 0;
+}
