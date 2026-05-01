@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main() {
+    int pass[10], fail[10];
+    int p = 0, f = 0;
+    int i, marks; 
+    int failMarks = 0, passMarks = 0;
+    double averagePass = 0, averageFail = 0;
+    
+    printf("Enter the marks (-1 to stop): \n");
+    while(1){
+        scanf("%d", &marks);
+        if(marks == -1)
+        break;
+        if(marks >= 5 && marks <= 10){
+            pass[p] = marks;
+            p++;
+            passMarks = passMarks + marks;
+            averagePass = passMarks / p;
+        }
+        else if(marks >= 0 && marks < 5){
+            fail[f] = marks;
+            f++;
+            failMarks = failMarks + marks;
+            averageFail = failMarks / f;
+        }
+    }
+      if(p > 0){
+        averagePass = passMarks / p;
+      }
+    if(f > 0){
+        averageFail = failMarks / f;
+    }
+    printf("Pass: ");
+    for(i = 0; i < p; i++){
+        printf("%d ", pass[i]);
+    }
+    printf("\n");
+    printf("Fail: ");
+    for(i = 0; i < f; i++){
+        printf("%d ", fail[i]);
+    }
+    printf("\n");
+    printf("average pass: %.2lf ", averagePass);
+    printf("\n");
+    printf("average fail: %.2lf ", averageFail);
+    return 0;
+}
