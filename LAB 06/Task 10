@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int Rating;
+    int Excellent = 0, Satisfactory = 0, Improvement = 0;
+    while (Rating != -1){
+        printf("Enter the rating of Employee performance (-1 to stop): ");
+        scanf("%d", &Rating);
+        if(Rating >= 85){
+            Excellent++;
+        }
+        else if(Rating >= 60 && Rating < 85){
+            Satisfactory++;
+        }
+        else if(Rating >= 0 && Rating < 60){
+            Improvement++;
+        }
+        else{
+            printf("Invalid Input");
+        }
+    }
+    printf("Excellent: %d\n", Excellent);
+    printf("Satisfactory: %d\n", Satisfactory);
+    printf("Need Improvement: %d\n", Improvement);
+    return 0;
+}
