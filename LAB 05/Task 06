@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int Side1, Side2, Side3;
+    printf("Enter the 1st Side of triange: ");
+    scanf("%d", &Side1);
+    printf("Enter the 2nd Side of triange: ");
+    scanf("%d", &Side2);
+    printf("Enter the 3rd Side of triange: ");
+    scanf("%d", &Side3);
+    
+    if(Side1 == Side2 && Side2 == Side3){
+        printf("Equilateral Triangle");
+    }
+    else if(Side1 == Side2 || Side2 == Side3 || Side3 == Side1){
+        printf("Isosceles Triangle");
+    }
+    else if(Side1 + Side2 <= Side3 || Side2 + Side3 <= Side1 || Side3 + Side1 <= Side2){
+        printf("Not a valid triangle");
+    }
+    else
+    {
+        printf("scalene");
+    }
+    return 0;
+}
