@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int Units;
+    int type;
+    printf("Enter the consumation electricity units: ");
+    scanf("%d", &Units);
+    if(Units <= 100)
+    {
+        printf("Rs. 10 Per units");
+    }
+    else if(Units > 100 && Units <= 300)
+    {
+     printf("1. Domestic People\n2. Commercial People\n");   
+    printf("Enter the type of People: ");
+    scanf("%d", &type);
+        if(type == 1)
+        {
+            printf("Rs. 12 per unit");
+        }
+        else if(type == 2)
+        {
+            printf("Rs. 15 per unit");
+        }
+    }
+    else
+    {
+        printf("Rs. 20 per unit");
+    }
+    return 0;
+}
