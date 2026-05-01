@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(){
+	int balance = 10000;
+	int number;
+	int withdraw;
+	int deposit;
+	int amount;
+	
+	printf("1. Balance Inquiry\n");
+	printf("2. Cash Withdrawal\n");
+	printf("3. Deposit\n");
+	printf("4. Exit\n");
+	printf("Enter the number: ");
+	scanf("%d", &number);
+	
+	switch(number){
+		case 1: printf("your %d balance in your account", balance); break;
+		case 2: printf("How much you want to Withdraw: ");
+		scanf("%d", &withdraw);
+		if(withdraw > balance){
+			printf("Insufficient balance");
+		}
+		else{
+		amount = 10000 - withdraw;
+		printf("Now, %d PKR in you account", amount);
+		}
+		break;
+		case 3:printf("How much you want to Deposit: ");
+		scanf("%d", &deposit);
+		amount = deposit + 10000;
+		printf("Now, %d PKR in you account", amount); break;
+		case 4: printf("Thank you, i hope we meet again."); break;
+		default: printf("Invalid Number"); break;
+	}
+	return 0;
+}
